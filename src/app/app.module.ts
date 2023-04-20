@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomelanderComponent } from './homelander/homelander.component';
+import { WhiteboxComponent } from './whitebox/whitebox.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomelanderComponent
+    HomelanderComponent,
+    WhiteboxComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [HomelanderComponent]

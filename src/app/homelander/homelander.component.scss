@@ -3,48 +3,7 @@
     font-size: 32px;
     font-family: "Segoe UI";
 } 
-// boîte blanche animée
-#whitebox {
-    --whitebox_padding-ver: 16px; 
-    --whitebox_padding-hor: 32px;
-    --whitebox_width: 250px;
-    --whitebox_height: 50px;
-    --whitebox_border-width: 1px;
-    // calcul de la position basse et de droite de la whitebox
-    --whitebox_bottom_position: calc( 100% - (var(--whitebox_height) + 2 * var(--whitebox_padding-ver) + 2 * var(--whitebox_border-width)));
-    --whitebox_right_position: calc(100% - (var(--whitebox_width) + 2 * var(--whitebox_padding-hor) + 2 * var(--whitebox_border-width)));
-    
-    display: inline-block;
-    position: absolute;
-    text-align: center;
 
-    height: var(--whitebox_height);
-    width: var(--whitebox_width);
-    padding: var(--whitebox_padding-ver) var(--whitebox_padding-hor);
-    border: var(--whitebox_border-width) solid rgb(74, 74, 74);
-    border-radius: 10px;
-    box-shadow: 8px 4px 8px rgb(0, 0, 0, 0.5);
-    background-color: rgb(255, 255, 255, 0.8);
-    
-    animation: 13s linear 1s infinite slidein;
-}
-
-// animation de la whitebox
-@keyframes slidein {
-    0%   {left: 0%; top: 0%;}
-    25% {left: 0%; top: var(--whitebox_bottom_position)}
-    50% {left: var(--whitebox_right_position); top: var(--whitebox_bottom_position);}
-    75% {left: var(--whitebox_right_position); top: 0%;}
-    100% {left: 0%; top: 0%}
-}  
-
-#blue-words {
-    color: blue;
-}
-
-#red-words {
-    color: red;
-}
 
 // conteneur principal prenant l'espace du viewport, de fond bleu ciel avec homelander 
 #mainContainer {
@@ -56,14 +15,3 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-
-// #youtube-link {
-//     margin: 100px;
-//     display: inline;
-//     position: absolute;
-//     height: 50vh;
-//     width: 50vw;
-//     background-image: url('../../assets/logoYOUTUBEad267e3735efc6881b3b387f8357bee4.png');
-//     background-repeat: no-repeat;
-//     background-size: auto;
-// }
